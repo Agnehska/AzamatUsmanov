@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ветеринарная Клиника</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f9f9f9;
+        }
+        header {
+            background-color: #4CAF50;
+            color: white;
+            padding: 15px;
+            text-align: center;
+        }
+        nav a {
+            color: white;
+            margin: 0 15px;
+            text-decoration: none;
+        }
+        main {
+            padding: 20px;
+        }
+        form {
+            background: white;
+            padding: 20px;
+            border-radius: 5px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            max-width: 400px;
+            margin: auto;
+        }
+        input {
+            width: 100%;
+            padding: 10px;
+            margin: 10px 0;
+        }
+        button {
+            background-color: #4CAF50;
+            color: white;
+            border: none;
+            padding: 10px;
+            cursor: pointer;
+            width: 100%;
+        }
+        button:hover {
+            opacity: 0.9;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Ветеринарная Клиника</h1>
+        <nav>
+            <a href="#">Главная</a>
+            <a href="#">Регистрация</a>
+            <a href="#">Вход</a>
+            <a href="#">Создать бронирование</a>
+            <a href="#">Мои бронирования</a>
+            <a href="#">Выход</a>
+        </nav>
+    </header>
+
+    <main id="mainContent">
+        <div id="home">
+            <h2>Добро пожаловать!</h2>
+            <p>Здесь вы можете забронировать услуги ветеринарной клиники.</p>
+        </div>
+
+        <div id="register" style="display:none;">
+            <h2>Регистрация</h2>
+            <form id="registrationForm">
+                <input type="text" id="regUsername" placeholder="Логин" required>
+                <input type="email" id="regEmail" placeholder="E-mail" required>
+                <input type="password" id="regPassword" placeholder="Пароль" required>
+                <button type="submit">Зарегистрироваться</button>
+            </form>
+        </div>
+
+        <div id="login" style="display:none;">
+            <h2>Вход</h2>
+            <form id="loginForm">
+                <input type="text" id="loginUsername" placeholder="Логин" required>
+                <input type="password" id="loginPassword" placeholder="Пароль" required>
+                <button type="submit">Войти</button>
+            </form>
+        </div>
+
+        <div id="createBooking" style="display:none;">
+            <h2>Создать бронирование</h2>
+            <form id="bookingForm">
+                <input type="text" id="petName" placeholder="Имя питомца" required>
+                <input type="text" id="phone" placeholder="Телефон" required>
+                <input type="email" id="email" placeholder="E-mail" required>
+                <input type="date" id="date" required>
+                <input type="time" id="time" required>
+                <button type="submit">Создать бронирование</button>
+            </form>
+        </div>
+
+        <div id="viewBookings" style="display:none;">
+            <h2>Мои бронирования</h2>
+            <ul id="bookingList"></ul>
+        </div>
+    </main>
+
+</body>
+</html>
